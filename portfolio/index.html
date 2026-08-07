@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@pedepronto — Cardápios Digitais Premium para Restaurantes</title>
+<meta name="description" content="Criamos cardápios digitais modernos e exclusivos para o seu restaurante. Layout sob medida, QR Code, atualização simples e venda direto pelo WhatsApp/Instagram. Fale com a gente!" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="@pedepronto — Cardápios Digitais Premium" />
+<meta property="og:description" content="Seu restaurante merece um cardápio digital à altura da qualidade da sua comida." />
+<meta property="og:image" content="assets/images/og-cover.svg" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Pé Pronto — Cardápios Digitais",
+  "description": "Criação de cardápios digitais premium para restaurantes.",
+  "sameAs": ["https://www.instagram.com/pedepronto"],
+  "areaServed": "Brasil"
+}
+</script>
+</head>
+<body class="preload">
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-logo"><span class="logo-mark">P</span></div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 1 10-10c0 2.2-1.8 3-3.5 3H16a2 2 0 0 0-1.5 3.3c.4.5.3 1.2-.4 1.5-.8.4-1.5.9-1.5 2.2z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="7.5" cy="11" r="1.2" fill="currentColor"/><circle cx="10.5" cy="7" r="1.2" fill="currentColor"/><circle cx="15" cy="7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.6.4l3-3a4 4 0 0 0-5.7-5.7l-1.5 1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 10a4 4 0 0 0-5.6-.4l-3 3a4 4 0 0 0 5.7 5.7l1.5-1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-device" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 18.5h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 3v4h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m3 13 9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-app" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="13" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="13" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 18.8 6.2 21l1.1-6.5L2.6 9.8l6.5-.9L12 3z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 9c0 3.5 3 6.5 6.5 6.5l1-2-2-1-1 .6c-1-.6-1.9-1.5-2.5-2.5l.6-1-1-2-2 1z" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 14h3v3h-3zM20 14h1M14 20h1M20 20h1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#inicio" aria-label="Pé Pronto — início">
+      <span class="brand-mark"><span class="logo-mark">P</span></span>
+      <span class="brand-text">Pé<span>Pronto</span></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#beneficios">Benefícios</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">FAQ</a>
+      <a class="menu-cta" id="navCta" href="#">Solicitar orçamento</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false">
+      <svg class="ic menu"><use href="#i-menu"/></svg>
+      <svg class="ic close"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="kicker">Cardápios digitais premium</span>
+        <h1>Seu restaurante merece um <em>cardápio digital</em> à altura da qualidade da sua comida.</h1>
+        <p>Layout exclusivo, fotos em alta, QR Code e atualização simples. Seus clientes veem o cardápio em segundos — e você vende mais.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#portfolio">Ver portfólio</a>
+          <a class="btn btn-ghost" href="#" data-action="cta"><svg class="ic"><use href="#i-ig"/></svg> Fazer orçamento</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>15+</strong><span>cardápios entregues</span></div>
+          <div class="stat"><strong>48h</strong><span>tempo médio</span></div>
+          <div class="stat"><strong>100%</strong><span>layout exclusivo</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="glow glow-a"></div>
+        <div class="glow glow-b"></div>
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="pm-bar"><span class="pm-dot"></span><span class="pm-name">Dona Ambrosina</span><span class="pm-cart">Sacola</span></div>
+            <div class="pm-cover"><img src="assets/portfolio/dona-ambrosina.jpg" alt="" loading="eager"><div class="pm-cover-shade"></div><div class="pm-cover-text"><span>COZINHA DE FAMÍLIA</span><strong>Dona Ambrosina</strong></div></div>
+            <div class="pm-search"></div>
+            <div class="pm-item"><span class="pm-thumb" style="background-image:url('assets/portfolio/dona-ambrosina.jpg')"></span><span class="pm-info"><b>Risoto de Pastor</b><small>R$ 68,00</small></span><span class="pm-add">+</span></div>
+            <div class="pm-item"><span class="pm-thumb" style="background-image:url('assets/portfolio/dona-ambrosina.jpg')"></span><span class="pm-info"><b>Filé à Parmegiana</b><small>R$ 58,00</small></span><span class="pm-add">+</span></div>
+            <div class="pm-item"><span class="pm-thumb" style="background-image:url('assets/portfolio/dona-ambrosina.jpg')"></span><span class="pm-info"><b>Pudim da Vovó</b><small>R$ 22,00</small></span><span class="pm-add">+</span></div>
+            <div class="pm-footer">Ver sacola · 3</div>
+          </div>
+        </div>
+        <div class="float-chip chip-1">⚡ Sem aplicativo</div>
+        <div class="float-chip chip-2">📱 Abre em segundos</div>
+        <div class="float-chip chip-3">✨ QR Code pronto</div>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#beneficios" aria-label="Rolar para benefícios"><svg class="ic"><use href="#i-chev"/></svg></a>
+  </section>
+
+  <!-- ===================== BENEFÍCIOS ===================== -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Por que um cardápio digital</span>
+        <h2>Mais do que um menu. Uma <em>experiência de marca.</em></h2>
+        <p>Seu cardápio é o cartão de visitas que seus clientes veem todos os dias. Deixe-o à altura do seu restaurante.</p>
+      </div>
+      <div class="grid benefits">
+        <article class="card reveal"><div class="card-ic"><svg class="ic"><use href="#i-palette"/></svg></div><h3>Aparência profissional</h3><p>Design premium que valoriza a identidade do seu restaurante.</p></article>
+        <article class="card reveal"><div class="card-ic"><svg class="ic"><use href="#i-star"/></svg></div><h3>Mais credibilidade</h3><p>Passa confiança e aumenta o ticket médio dos pedidos.</p></article>
+        <article class="card reveal"><div class="card-ic"><svg class="ic"><use href="#i-qr"/></svg></div><h3>Link ou QR Code</h3><p>Compartilhe por link, QR Code nas mesas ou nas redes.</p></article>
+        <article class="card reveal"><div class="card-ic"><svg class="ic"><use href="#i-device"/></svg></div><h3>Funciona em qualquer celular</h3><p>Responsivo, leve e rápido em qualquer aparelho.</p></article>
+        <article class="card reveal"><div class="card-ic"><svg class="ic"><use href="#i-refresh"/></svg></div><h3>Atualização simples</h3><p>Mudou o preço ou o prato? A gente ajusta rapidinho.</p></article>
+        <article class="card reveal"><div class="card-ic"><svg class="ic"><use href="#i-layers"/></svg></div><h3>Layout exclusivo</h3><p>Cada projeto é único, desenhado sob medida para o seu negócio.</p></article>
+        <article class="card reveal"><div class="card-ic"><svg class="ic"><use href="#i-zap"/></svg></div><h3>Carregamento rápido</h3><p>Imagens otimizadas e performance pensada para vender.</p></article>
+        <article class="card reveal"><div class="card-ic"><svg class="ic"><use href="#i-app"/></svg></div><h3>Sem necessidade de app</h3><p>Nenhuma instalação: funciona direto no navegador.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTFÓLIO ===================== -->
+  <section class="section section-dark" id="portfolio">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Trabalhos recentes</span>
+        <h2>Cardápios que já <em>estão vendendo</em>.</h2>
+        <p>Toque em um projeto para abrir a demonstração real, funcionando de verdade.</p>
+      </div>
+      <div class="grid portfolio" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ANTES x DEPOIS ===================== -->
+  <section class="section" id="transformacao">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Antes × Depois</span>
+        <h2>A diferença que seus clientes <em>sentem.</em></h2>
+      </div>
+      <div class="vs">
+        <div class="vs-card vs-before reveal">
+          <div class="vs-tag">Antes</div>
+          <h3>Apenas Instagram ou PDF</h3>
+          <ul>
+            <li><span class="x">✕</span> Cardápio difícil de ler e navegar</li>
+            <li><span class="x">✕</span> Fotos amadoras e desorganizadas</li>
+            <li><span class="x">✕</span> Sem QR Code para as mesas</li>
+            <li><span class="x">✕</span> Atualizações sempre atrasadas</li>
+          </ul>
+        </div>
+        <div class="vs-arrow reveal"><svg class="ic"><use href="#i-arrow"/></svg></div>
+        <div class="vs-card vs-after reveal">
+          <div class="vs-tag">Depois</div>
+          <h3>Cardápio digital profissional</h3>
+          <ul>
+            <li><span class="ok">✓</span> Design moderno e exclusivo</li>
+            <li><span class="ok">✓</span> Fotos em alta qualidade</li>
+            <li><span class="ok">✓</span> Compartilhamento por link ou QR Code</li>
+            <li><span class="ok">✓</span> Melhor experiência para os clientes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Processo simples</span>
+        <h2>Do contato ao cardápio no ar em <em>4 passos.</em></h2>
+      </div>
+      <div class="timeline">
+        <div class="step reveal"><span class="step-num">01</span><h3>Você entra em contato</h3><p>Chama no WhatsApp ou Instagram e conta sobre o seu restaurante.</p></div>
+        <div class="step reveal"><span class="step-num">02</span><h3>Envia o cardápio</h3><p>Manda a lista de pratos e preços do jeito que estiver.</p></div>
+        <div class="step reveal"><span class="step-num">03</span><h3>Projeto desenvolvido</h3><p>Crio o layout exclusivo com fotos, cores e a cara do seu negócio.</p></div>
+        <div class="step reveal"><span class="step-num">04</span><h3>Recebe seu cardápio pronto</h3><p>Aprova, recebe o link e o QR Code — pronto para usar.</p></div>
+      </div>
+      <div class="timeline-cta reveal">
+        <a class="btn btn-primary" href="#" data-action="cta">Começar meu cardápio <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RECURSOS ===================== -->
+  <section class="section section-dark" id="recursos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">O que está incluso</span>
+        <h2>Tudo o que seu restaurante precisa <em>num só lugar.</em></h2>
+      </div>
+      <div class="features">
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> Layout exclusivo</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> Design personalizado</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> Fotos em alta qualidade</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> 100% responsivo</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> Botão WhatsApp</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> QR Code para as mesas</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> SEO otimizado</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> Hospedagem opcional</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> Alta performance</div>
+        <div class="feature reveal"><span><svg class="ic"><use href="#i-check"/></svg></span> Atualizações futuras</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEPOIMENTOS ===================== -->
+  <section class="section" id="depoimentos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Depoimentos</span>
+        <h2>Quem usou, <em>recomenda.</em></h2>
+      </div>
+      <div class="grid testimonials">
+        <article class="card t-card reveal">
+          <div class="t-stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></div>
+          <p>“O cardápio ficou incrível. Nossos clientes vivem elogiando e o número de pedidos pelo celular cresceu muito.”</p>
+          <div class="t-meta"><span class="t-avatar">R</span><div><b>Restaurante Exemplo</b><small>Cidade — <em>Depoimento de exemplo</em></small></div></div>
+        </article>
+        <article class="card t-card reveal">
+          <div class="t-stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></div>
+          <p>“A gente só mandava o cardápio em PDF no WhatsApp. Agora é só apontar o QR Code e o cliente navega sozinho.”</p>
+          <div class="t-meta"><span class="t-avatar">H</span><div><b>Hamburgueria Exemplo</b><small>Capital — <em>Depoimento de exemplo</em></small></div></div>
+        </article>
+        <article class="card t-card reveal">
+          <div class="t-stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></div>
+          <p>“Atendimento rápido e o layout exclusivo valorizou demais a nossa imagem. Mudança de preço? Resolvem na hora.”</p>
+          <div class="t-meta"><span class="t-avatar">P</span><div><b>Pizzaria Exemplo</b><small>Interior — <em>Depoimento de exemplo</em></small></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head reveal">
+        <span class="kicker">Dúvidas frequentes</span>
+        <h2>Perguntas <em>respondidas.</em></h2>
+      </div>
+      <div class="faq" id="faqList">
+        <details class="faq-item reveal">
+          <summary><span>Preciso ter site?</span><svg class="ic chev"><use href="#i-chev"/></svg></summary>
+          <p>Não. O cardápio digital é uma página própria, mas você não precisa gerenciar nada. É só compartilhar o link ou o QR Code.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span>Funciona em qualquer celular?</span><svg class="ic chev"><use href="#i-chev"/></svg></summary>
+          <p>Sim. O layout é responsivo e funciona perfeitamente em Android, iPhone, tablet e desktop — sem instalar aplicativo nenhum.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span>Posso atualizar depois?</span><svg class="ic chev"><use href="#i-chev"/></svg></summary>
+          <p>Pode. Mudei o preço, entrou um prato novo ou saiu um da temporada? É só pedir que a atualização é feita rapidinho.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span>Vocês fazem QR Code?</span><svg class="ic chev"><use href="#i-chev"/></svg></summary>
+          <p>Sim, todo projeto sai com QR Code pronto para imprimir nas mesas, totens ou cartazes do restaurante.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span>Quanto tempo leva?</span><svg class="ic chev"><use href="#i-chev"/></svg></summary>
+          <p>Em média 48 horas após o envio do cardápio e das fotos. Projetos especiais podem levar um pouco mais, combinamos tudo antes.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="cta-final" id="contato">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Última chamada</span>
+        <h2>Vamos transformar o cardápio do <em>seu restaurante?</em></h2>
+        <p>Chama no Instagram agora e recebe o orçamento sem compromisso.</p>
+      </div>
+      <div class="cta-final-btns reveal">
+        <a class="btn btn-primary btn-lg" href="#" data-action="cta"><svg class="ic"><use href="#i-ig"/></svg> Chamar no Instagram</a>
+        <a class="btn btn-ghost btn-lg" href="#" data-action="wa"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio"><span class="brand-mark"><span class="logo-mark">P</span></span><span class="brand-text">Pé<span>Pronto</span></span></a>
+        <p>Cardápios digitais premium para restaurantes que querem vender mais.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="#" data-action="ig"><svg class="ic"><use href="#i-ig"/></svg> @pedepronto</a></li>
+          <li><a href="#" data-action="wa"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp</a></li>
+          <li><a href="#" data-action="mail"><svg class="ic"><use href="#i-mail"/></svg> contato@pedepronto.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+          <li><a href="#contato">Orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> @pedepronto — Cardápios Digitais. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg class="ic"><use href="#i-chev"/></svg></button>
+
+<!-- ===================== MODAL PORTFÓLIO ===================== -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Demonstração do cardápio">
+  <button class="modal-close" id="modalClose" aria-label="Fechar"><svg class="ic"><use href="#i-close"/></svg></button>
+  <button class="modal-nav prev" id="modalPrev" aria-label="Projeto anterior"><svg class="ic"><use href="#i-chev"/></svg></button>
+  <button class="modal-nav next" id="modalNext" aria-label="Próximo projeto"><svg class="ic"><use href="#i-chev"/></svg></button>
+  <div class="modal-body" id="modalBody">
+    <div class="m-phone">
+      <div class="phone-notch"></div>
+      <div class="m-screen" id="modalScreen"></div>
+    </div>
+    <div class="m-info" id="modalInfo"></div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

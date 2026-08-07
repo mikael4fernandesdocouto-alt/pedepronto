@@ -1,0 +1,78 @@
+rules_version = '2';
+
+// ============================================================
+//  Regras de segurança — Cardápios Digitais
+//  ------------------------------------------------------------
+//  Cada restaurante acessa apenas os próprios dados em:
+//  restaurants/{restaurantId}/...
+//
+//  O administrador do restaurante é identificado pelo e-mail
+//  autenticado no Firebase Authentication. O campo `admins`
+//  em restaurants/{restaurantId}/settings/info deve conter a
+//  lista de uids autorizados.
+// //
+//  ESTRTURA:
+//  restaurants/{id}/
+//    settings/info   (documento único com dados de contato)
+//    settings/banner (banner do topo)
+//    settings/logo   (logo)
+//    settings/appearance (cores/fonte/favicon)
+//    categories/{catId}
+//    products/{prodId}
+//    promotions/{promoId}
+//    gallery/{imgId}
+// ============================================================
+
+function isSignedIn() {
+  return request.auth != null;
+}
+
+// Verifica se o usuário autenticado está na lista de admins do restaurante
+function isAdmin(restaurantId) {
+  return isSignedIn() &&
+    exists(/databases/$(database)/documents/restaurants/$(restaurantId)/settings/info) &&
+    request.auth.uid in
+      get(/databases/$(database)/documents/restaurants/$(restaurantId)/settings/info).data.admins;
+}
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Raiz: cada restaurante está isolado pelo seu ID
+    match /restaurants/{restaurantId} {
+      // Documento settings/info (contato + lista de admins)
+      match /settings/info {
+        allow read: if true;   // cardápio público precisa ler
+        allow write: if isAdmin(restaurantId);
+      }
+      // Outros documentos de settings (banner, logo, appearance)
+      match /settings/{doc} {
+        allow read: if true;
+        allow write: if isAdmin(restaurantId);
+      }
+
+      // Subcoleções públicas para leitura, privadas para escrita
+      match /categories/{catId} {
+        allow read: if true;
+        allow write: if isAdmin(restaurantId);
+      }
+      match /products/{prodId} {
+        allow read: if true;
+        allow write: if isAdmin(restaurantId);
+      }
+      match /promotions/{promoId} {
+        allow read: if true;
+        allow write: if isAdmin(restaurantId);
+      }
+      match /gallery/{imgId} {
+        allow read: if true;
+        allow write: if isAdmin(restaurantId);
+      }
+    }
+
+    // Bloqueia qualquer outro caminho
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

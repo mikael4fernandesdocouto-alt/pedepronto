@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel — Alppes Sabor · Acesso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-hero">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <div class="brand-name">Alppes Sabor</div>
+          <div class="tag">Painel administrativo</div>
+        </div>
+      </div>
+      <h1>Embarque na cozinha</h1>
+      <p>Acesse o painel para gerenciar seu cardápio, promoções e informações do restaurante — sem precisar editar código.</p>
+    </div>
+
+    <div class="login-body">
+      <div class="login-error" id="err">Credenciais inválidas. Verifique e tente novamente.</div>
+      <form id="form">
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="voce@restaurante.com" autocomplete="email" required />
+        </div>
+        <div class="field" style="position:relative">
+          <label for="pass">Senha</label>
+          <input type="password" id="pass" placeholder="Sua senha" autocomplete="current-password" required />
+          <button type="button" class="eye" id="eye" aria-label="Mostrar senha">👁️</button>
+        </div>
+        <button type="submit" class="login-btn" id="btn">Entrar no painel</button>
+      </form>
+      <a class="login-back" href="../index.html">← Voltar para o cardápio público</a>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { firebaseConfig } from "./firebase-config.js";
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    /* Se já estiver logado, redireciona para o painel */
+    onAuthStateChanged(auth, user => { if (user) window.location.href = 'index.html'; });
+
+    const form  = document.getElementById('form');
+    const email = document.getElementById('email');
+    const pass  = document.getElementById('pass');
+    const btn   = document.getElementById('btn');
+    const err   = document.getElementById('err');
+    const eye   = document.getElementById('eye');
+
+    eye.addEventListener('click', () => {
+      pass.type = pass.type === 'password' ? 'text' : 'password';
+      eye.textContent = pass.type === 'password' ? '👁️' : '🙈';
+    });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      err.classList.remove('show');
+      btn.disabled = true;
+      btn.textContent = 'Entrando...';
+      try {
+        await signInWithEmailAndPassword(auth, email.value.trim(), pass.value);
+        window.location.href = 'index.html';
+      } catch (e) {
+        err.classList.add('show');
+        btn.disabled = false;
+        btn.textContent = 'Entrar no painel';
+      }
+    });
+  </script>
+</body>
+</html>

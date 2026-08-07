@@ -1,0 +1,60 @@
+/* ---------- responsivo ---------- */
+@media (max-width:1080px){
+  .benefits{grid-template-columns:repeat(2,1fr)}
+  .features{grid-template-columns:repeat(3,1fr)}
+  .timeline{grid-template-columns:repeat(2,1fr)}
+  .timeline::before{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-visual{min-height:0;padding-top:30px}
+  .hero-copy{text-align:center;max-width:640px;margin:0 auto}
+  .hero-copy p{margin-left:auto;margin-right:auto}
+  .hero-cta,.hero-stats{justify-content:center}
+  .modal-body{flex-direction:column;gap:30px}
+  .m-info{text-align:center}
+  .m-info p{margin-left:auto;margin-right:auto}
+  .m-info .m-actions{justify-content:center}
+}
+@media (max-width:860px){
+  .menu{
+    position:fixed;top:var(--nav-h);left:0;right:0;z-index:99;
+    flex-direction:column;align-items:stretch;gap:4px;
+    background:rgba(11,11,13,.97);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+    padding:14px 18px 22px;max-height:0;overflow:hidden;opacity:0;
+    transition:max-height .4s var(--ease),opacity .3s ease;
+  }
+  .menu.open{max-height:520px;opacity:1}
+  .menu a{padding:12px 14px;font-size:1rem}
+  .menu a.active::after{display:none}
+  .menu a.menu-cta{margin:10px 0 0;text-align:center}
+  .nav-burger{display:flex}
+  .portfolio{grid-template-columns:repeat(2,1fr)}
+  .vs{grid-template-columns:1fr;gap:20px}
+  .vs-arrow{transform:rotate(90deg)}
+  .hero{padding-top:calc(var(--nav-h) + 30px)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .section{padding:80px 0}
+  .benefits,.portfolio,.testimonials,.features{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr}
+  .hero-stats{gap:22px}
+  .float-chip{display:none}
+  .phone,.m-phone{width:272px;height:556px}
+  .footer-grid{grid-template-columns:1fr;gap:36px}
+  .modal{padding:24px 14px}
+  .modal-nav{width:42px;height:42px}
+  .modal-nav.prev{left:6px}
+  .modal-nav.next{right:6px}
+  .modal-body{gap:22px}
+  .p-cover{height:220px}
+  .m-phone .phone-notch{top:12px}
+}
+
+/* ---------- acessibilidade / movimento ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+  .float-chip{animation:none}
+}

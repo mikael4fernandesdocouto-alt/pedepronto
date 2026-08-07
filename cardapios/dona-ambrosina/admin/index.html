@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel — Dona Ambrosina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+<div class="sidebar-backdrop" id="backdrop"></div>
+
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">D</div>
+      <div>
+        <div class="brand-name">Dona Ambrosina</div>
+        <div class="brand-sub">Painel</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#/dashboard"    data-nav="dashboard"    class="active"><span class="ico">▦</span> Dashboard</a>
+      <a href="#/products"     data-nav="products"    ><span class="ico">🍽️</span> Produtos</a>
+      <a href="#/categories"   data-nav="categories"  ><span class="ico">📚</span> Categorias</a>
+      <a href="#/promotions"   data-nav="promotions"  ><span class="ico">🏷️</span> Promoções</a>
+      <a href="#/gallery"      data-nav="gallery"     ><span class="ico">🖼️</span> Galeria</a>
+      <a href="#/banner"       data-nav="banner"      ><span class="ico">🌄</span> Banner Principal</a>
+      <a href="#/logo"         data-nav="logo"        ><span class="ico">⭐</span> Logo</a>
+      <a href="#/info"         data-nav="info"        ><span class="ico">ℹ️</span> Informações</a>
+      <a href="#/appearance"   data-nav="appearance"  ><span class="ico">🎨</span> Configurações</a>
+    </nav>
+    <div class="foot">
+      <a id="logoutBtn"><span class="ico">⏻</span> Sair</a>
+      <a href="../index.html" target="_blank"><span class="ico">↗</span> Ver cardápio</a>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <h1 id="pageTitle">Dashboard</h1>
+      <div class="spacer"></div>
+      <div class="top-search">
+        <input type="text" id="globalSearch" placeholder="Buscar produtos..." />
+      </div>
+      <div class="user-chip">
+        <div class="avatar" id="userAvatar">—</div>
+        <span id="userName">Carregando...</span>
+      </div>
+    </div>
+
+    <div class="content" id="view"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

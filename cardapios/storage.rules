@@ -1,0 +1,29 @@
+rules_version = '2';
+
+// ============================================================
+//  Regras de segurança — Firebase Storage
+//  ------------------------------------------------------------
+//  Caminho das imagens:
+//  restaurants/{restaurantId}/images/{tipo}/{arquivo}
+//  Tipos: products, logo, banner, gallery, favicon
+//
+//  Qualquer pessoa pode LER as imagens (cardápio público).
+//  Apenas administradores autenticados do restaurante podem GRAVAR.
+// ============================================================
+
+function isSignedIn() { return request.auth != null; }
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /restaurants/{restaurantId}/{allPaths=**} {
+      allow read: if true;
+      allow write: if isSignedIn()
+        && request.resource.size < 5 * 1024 * 1024 // 5MB máx
+        && request.resource.contentType.matches('image/.*');
+    }
+    match /{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}
