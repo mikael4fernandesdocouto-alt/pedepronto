@@ -51,28 +51,28 @@ const PORTFOLIO = [
     name: "Burger House",
     cat: "Hamburgueria",
     city: "São Paulo",
-    desc: "Projeto de exemplo. O seu hambúrguer pode ganhar um cardápio assim, com a cara da sua marca.",
-    real: false,
-    grad: "grad-1",
-    letter: "B"
+    desc: "Hambúrgueres artesanais com combos, carrinho e pedido direto pelo WhatsApp.",
+    img: "assets/portfolio/burger-house.svg",
+    demo: "../cardapios/burger-house/index.html",
+    real: true
   },
   {
     name: "La Fornaia",
     cat: "Pizzaria",
     city: "Curitiba",
-    desc: "Projeto de exemplo. Visual quente e convidativo, perfeito para uma pizzaria.",
-    real: false,
-    grad: "grad-2",
-    letter: "L"
+    desc: "Pizzas de fermentação longa e forno a lenha, com pedido completo no cardápio.",
+    img: "assets/portfolio/la-fornaia.svg",
+    demo: "../cardapios/la-fornaia/index.html",
+    real: true
   },
   {
     name: "Sushi Nami",
     cat: "Sushi",
     city: "Florianópolis",
-    desc: "Projeto de exemplo. Clean e elegante, ideal para quem vende delivery e balcão.",
-    real: false,
-    grad: "grad-3",
-    letter: "S"
+    desc: "Sushi fresco, hot rolls e combos — cardápio limpo e rápido para delivery.",
+    img: "assets/portfolio/sushi-nami.svg",
+    demo: "../cardapios/sushi-nami/index.html",
+    real: true
   }
 ];
 

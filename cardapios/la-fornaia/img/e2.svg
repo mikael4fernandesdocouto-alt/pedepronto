@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2a65a"/>
+      <stop offset="1" stop-color="#c97b1f"/>
+    </linearGradient>
+    <radialGradient id="r" cx="50%" cy="28%" r="78%">
+      <stop offset="0" stop-color="rgba(255,255,255,.24)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#g)"/>
+  <rect width="800" height="900" fill="url(#r)"/>
+  <circle cx="640" cy="170" r="120" fill="rgba(255,255,255,.10)"/>
+  <circle cx="120" cy="770" r="170" fill="rgba(0,0,0,.08)"/>
+  <circle cx="706" cy="700" r="46" fill="rgba(255,255,255,.12)"/>
+  <circle cx="96" cy="196" r="36" fill="rgba(255,255,255,.14)"/>
+  <text x="400" y="468" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif" font-size="330" text-anchor="middle" dominant-baseline="middle">🧄</text>
+</svg>
