@@ -544,6 +544,7 @@ body:not(.preload) *{transition:opacity .5s var(--ease),transform .5s var(--ease
   position:fixed;inset:0;z-index:150;background:rgba(5,5,7,.92);
   -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   display:none;align-items:center;justify-content:center;padding:40px 24px;
+  overflow-y:auto;
 }
 .modal.open{display:flex;animation:fadeIn .3s ease both}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -565,7 +566,7 @@ body:not(.preload) *{transition:opacity .5s var(--ease),transform .5s var(--ease
 .modal-nav:hover{background:var(--orange);color:#0b0b0d}
 .modal-nav.prev{left:18px}.modal-nav.prev .ic{transform:rotate(90deg)}
 .modal-nav.next{right:18px}.modal-nav.next .ic{transform:rotate(-90deg)}
-.modal-body{display:flex;align-items:center;gap:48px;max-width:1080px;width:100%}
+.modal-body{display:flex;align-items:center;gap:48px;max-width:1080px;width:100%;margin:auto}
 .m-phone{
   flex:0 0 auto;width:302px;height:612px;border-radius:44px;
   background:#0a0a0c;border:1px solid rgba(255,255,255,.16);
